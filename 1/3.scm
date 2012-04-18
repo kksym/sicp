@@ -1,5 +1,7 @@
 
 (define (min . args)
+  (if (null? args)
+    (error "Need more arguments"))
   (let loop ((smallest #f)
              (accum args))
     (cond
